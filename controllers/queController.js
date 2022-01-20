@@ -130,7 +130,24 @@ const queController={
         }
         res.json(quebyallusers);
     },
-
+   
+    async pendingque(req,res,next){
+        let pendingque,ans=[];
+        try{
+           pendingque = await Question.find({userid: req.params.id});
+           for(let i=0; i<pendingque.length; i++)
+           {
+                let q=await Answer.find({queid: pendingque[i]._id, accepted: 'false'})
+                if(q.length!==0)
+                ans.push(q);
+           }
+        }
+        catch(err)
+        {
+            return next(err);
+        }
+        res.json(ans);
+    },
 
 
 }
