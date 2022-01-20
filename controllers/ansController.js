@@ -47,7 +47,20 @@ const ansController={
             res.status(200).json(answer)
         
 
-    }
+    },
+
+    async showallans(req,res,next){
+        let question,answers;
+        try{
+            question  = await Question.findOne({_id:req.params.id })
+            answers = await Answer.find({queid: req.params.id, accepted: true})
+        }
+        catch(err)
+        {
+            return next(err);
+        }
+        return res.json({question,answers})
+    },
 
 }
 

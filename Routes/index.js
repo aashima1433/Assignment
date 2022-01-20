@@ -13,5 +13,15 @@ router.post('/addanswer/:id/:userid',ansController.postans)
 router.put('/vote', voteController.vote)
 router.put('/updatequestion/:id',queController.updateque)
 router.get('/getque/:id',queController.getque)
+router.get('/showAllanswers/:id',ansController.showallans)
+
+
+
+
+
+
+
+
+
 
 export default router

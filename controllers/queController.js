@@ -93,7 +93,19 @@ const queController={
     },
 
    
-   
+    async getque(req,res,next){
+        let que;
+        
+        try{
+           que = await Question.findOne({_id: req.params.id});
+        }
+        catch(err)
+        {
+            return next(err);
+        }
+        res.json(que);
+    },
+
 
 }
 
