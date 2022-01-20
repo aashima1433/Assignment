@@ -9,5 +9,5 @@ router.post('/register',registerController.register)
 router.post('/login',loginController.login)
 router.post('/addquestion/:id',queController.postque)
 router.post('/addanswer/:id/:userid',ansController.postans)
-
+router.put('/vote',auth, voteController.vote)
 export default router
