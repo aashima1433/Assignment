@@ -62,6 +62,43 @@ const ansController={
         return res.json({question,answers})
     },
 
+    async acceptans(req,res,next){
+        const ansSchema = Joi.object({
+            description: Joi.string(),
+            upvote: Joi.number(),
+            downvote: Joi.number(),
+            accepted: Joi.boolean(),
+            queid: Joi.string(),
+            userid: Joi.string()
+            
+        });
+        const { error } = ansSchema.validate(req.body);
+
+        if (error) {
+            return next(error);
+        }
+
+        const { description,upvote,downvote,accepted,queid,userid} = req.body;
+        let document;
+            try {
+                document = await Answer.findOneAndUpdate(
+                    { _id: req.params.ansid },
+                    {
+                        description,
+                        upvote,
+                        downvote,
+                        accepted: true,
+                        queid,
+                        userid
+                    },
+                    { new: true }
+                );
+            } catch (err) {
+                return next(err);
+            }
+            res.status(201).json(document);
+    },
+
 }
 
 export default ansController

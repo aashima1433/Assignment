@@ -17,5 +17,8 @@ router.get('/showAllanswers/:id',ansController.showallans)
 router.get('/getall/:tag',queController.getall)
 router.get('/getallquebyuser/:id',queController.getallquebyuser)
 router.get('/pendingquestions/:id',queController.pendingque)
+router.put('/acceptanswer/:ansid',ansController.acceptans)
+
+
 
 export default router
