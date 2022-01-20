@@ -14,14 +14,8 @@ router.put('/vote', voteController.vote)
 router.put('/updatequestion/:id',queController.updateque)
 router.get('/getque/:id',queController.getque)
 router.get('/showAllanswers/:id',ansController.showallans)
-
-
-
-
-
-
-
-
+router.get('/getall/:tag',queController.getall)
+router.get('/getallquebyuser/:id',queController.getallquebyuser)
 
 
 export default router
