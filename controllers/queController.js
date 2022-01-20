@@ -50,6 +50,48 @@ const queController={
         
     },
 
+    async updateque(req,res,next){
+            
+        const queSchema = Joi.object({
+            title: Joi.string(),
+            detail: Joi.string(),
+            tags: Joi.array().items(Joi.string()),
+            upvote: Joi.number(),
+            downvote: Joi.number(),
+            userid: Joi.string(),
+        });
+        const { error } = queSchema.validate(req.body);
+
+        if (error) {
+            return next(error);
+        }
+
+        const { title,detail,tags,upvote,downvote,userid} = req.body;
+    
+        // prepare the model
+            let document;
+            try {
+                document = await Question.findOneAndUpdate(
+                    { _id: req.params.id },
+                    {
+                        title,
+                        detail,
+                        tags,
+                        upvote,
+                        downvote,
+                        userid
+                    },
+                    { new: true }
+                );
+            } catch (err) {
+                return next(err);
+            }
+            res.json(document);
+    
+        
+        
+    },
+
    
    
 
