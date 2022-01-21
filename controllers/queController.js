@@ -131,7 +131,7 @@ const queController={
         res.json(quebyallusers);
     },
    
-    async pendingque(req,res,next){
+    async pendingans(req,res,next){
         let pendingque,ans=[];
         try{
            pendingque = await Question.find({userid: req.params.id});
@@ -147,6 +147,24 @@ const queController={
             return next(err);
         }
         res.json(ans);
+    },
+
+    async allqueans(req,res,next){
+        let que,answers=[];
+        try{
+           que = await Question.find();
+           for(let i=0; i<que.length; i++)
+           {
+                let ans=await Answer.find({queid: que[i]._id, accepted: true})
+                if(ans.length!==0)
+                answers.push(ans);
+           }
+        }
+        catch(err)
+        {
+            return next(err);
+        }
+        res.json({que,answers});
     },
 
 

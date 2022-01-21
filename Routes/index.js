@@ -17,7 +17,8 @@ router.get('/getque/:id',auth,queController.getque)
 router.get('/showAllanswers/:id',auth,ansController.showallans)
 router.get('/getall/:tag',auth,queController.getall)
 router.get('/getallquebyuser/:id',auth,queController.getallquebyuser)
-router.get('/pendingquestions/:id',auth,queController.pendingque)
+router.get('/pendinganswers/:id',auth,queController.pendingans)
+router.get('/allquesans',auth,queController.allqueans)
 router.put('/acceptanswer/:ansid',auth,ansController.acceptans)
 
 
