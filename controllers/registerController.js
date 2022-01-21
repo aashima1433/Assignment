@@ -47,11 +47,11 @@ const registerController={
     let token;
     try {
         const res = await user.save();
-        token = JwtService.sign({ _id: res._id });
+        //token = JwtService.sign({ _id: res._id });
     } 
     
     catch(err) {
-        return next(err);
+        return next(new Error("user cant be registered!"));
     }
 
 
