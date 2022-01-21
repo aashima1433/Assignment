@@ -39,4 +39,5 @@ This project is a clone of Stackoverflow and work similarly as the real one with
  9. /getall/:tag
  10. /getallquebyuser/:id
  11. /pendinganswers/:id
- 12. /acceptanswer/:ansid
+ 12. /allquesans
+ 13. /acceptanswer/:ansid
