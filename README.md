@@ -43,15 +43,20 @@ This project is a clone of Stackoverflow and work similarly as the real one with
  13. /acceptanswer/:ansid
 
  # How Data is being stored
+```
 Users
 | feild-name   | data-type    | description                   |
+| :---         |     :---:    |          ---:                 |
 | _id          |  string      | it stores id of the user      |
 | name         | string       | it stores name of the user    |
 | email-id     | string       | it stores email of the user   |
 | password     | string       | it stores password of the user|
 ```
+
+```
 Questions
 | feild-name   | data-type      | description                             |
+| :---         |     :---:      |          ---:                           |
 | _id          | string         | it stores the id of the question        |
 | title        | string         | it stores the title of the question     |
 | detail       | string         | it stores the details of the question   |
@@ -59,10 +64,12 @@ Questions
 | userid       | string         | it stores the userid of user who asked the question|
 | upvote       | int            | it stores the upvotes of the question   |
 | downvote     | int            | it stores the downvotes of the question |
+```
 
 ```
 Answers
 | feild-name   | data-type      | description                                                   |
+| :---         |     :---:      |          ---:                                                 |
 | _id          | string         | it stores the id of the answer                                |
 | description  | string         | it stores the description of the answer                       |
 | queid        | array          | it stores the question id of the question whose answer is this|
@@ -70,3 +77,4 @@ Answers
 | upvote       | int            | it stores the upvotes of the answer                           |
 | downvote     | int            | it stores the downvotes of the answer                         |
 | accepted     | boolean        | it stores whether the naswer is accepted or not               |
+```
