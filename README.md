@@ -45,7 +45,7 @@ This project is a clone of Stackoverflow and work similarly as the real one with
  # How Data is being stored
 ```
 Users
-| feild-name   | data-type    | description                   |
+| field-name   | data-type    | description                   |
 | :---         |     :---:    |          ---:                 |
 | _id          |  string      | it stores id of the user      |
 | name         | string       | it stores name of the user    |
@@ -55,7 +55,7 @@ Users
 
 ```
 Questions
-| feild-name   | data-type      | description                                        |
+| field-name   | data-type      | description                                        |
 | :---         |     :---:      |          ---:                                      |
 | _id          | string         | it stores the id of the question                   |
 | title        | string         | it stores the title of the question                |
@@ -68,7 +68,7 @@ Questions
 
 ```
 Answers
-| feild-name   | data-type      | description                                                   |
+| field-name   | data-type      | description                                                   |
 | :---         |     :---:      |          ---:                                                 |
 | _id          | string         | it stores the id of the answer                                |
 | description  | string         | it stores the description of the answer                       |
