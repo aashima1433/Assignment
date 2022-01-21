@@ -46,7 +46,7 @@ This project is a clone of Stackoverflow and work similarly as the real one with
 ```
 Users
 | field-name   | data-type    | description                   |
-| :---         |     :---:    |          ---:                 |
+| :---         |     :---:    |                           ---:|
 | _id          |  string      | it stores id of the user      |
 | name         | string       | it stores name of the user    |
 | email-id     | string       | it stores email of the user   |
@@ -56,7 +56,7 @@ Users
 ```
 Questions
 | field-name   | data-type      | description                                        |
-| :---         |     :---:      |          ---:                                      |
+| :---         |     :---:      |                                                ---:|
 | _id          | string         | it stores the id of the question                   |
 | title        | string         | it stores the title of the question                |
 | detail       | string         | it stores the details of the question              |
@@ -69,10 +69,10 @@ Questions
 ```
 Answers
 | field-name   | data-type      | description                                                   |
-| :---         |     :---:      |          ---:                                                 |
+| :---         |     :---:      |                                                           ---:|
 | _id          | string         | it stores the id of the answer                                |
 | description  | string         | it stores the description of the answer                       |
-| queid        | array          | it stores the question id of the question whose answer is this|
+| queid        | string         | it stores the question id of the question whose answer is this|
 | userid       | string         | it stores the userid of user who answered the question        |
 | upvote       | int            | it stores the upvotes of the answer                           |
 | downvote     | int            | it stores the downvotes of the answer                         |
