@@ -3,7 +3,7 @@ import JwtService from '../services/jwtService';
 const auth = async (req, res, next) => {
     let authHeader = req.headers.authorization;
     if (!authHeader) {
-        return next(new Error("unauthorized"));
+        return next("unauthorized");
     }
 
     const token = authHeader.split(' ')[1];
@@ -17,7 +17,7 @@ const auth = async (req, res, next) => {
         next();
 
     } catch(err) {
-        return next(new Error("UnAuthorized"));
+        return next(err);
     }
 
 }
