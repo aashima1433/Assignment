@@ -43,7 +43,7 @@ This project is a clone of Stackoverflow and work similarly as the real one with
  13. /acceptanswer/:ansid
 
  # How Data is being stored
-```
+
 Users
 | field-name   | data-type    | description                   |
 | :---         |     :---:    |                           ---:|
@@ -51,9 +51,7 @@ Users
 | name         | string       | it stores name of the user    |
 | email-id     | string       | it stores email of the user   |
 | password     | string       | it stores password of the user|
-```
 
-```
 Questions
 | field-name   | data-type      | description                                        |
 | :---         |     :---:      |                                                ---:|
@@ -64,9 +62,7 @@ Questions
 | userid       | string         | it stores the userid of user who asked the question|
 | upvote       | int            | it stores the upvotes of the question              |
 | downvote     | int            | it stores the downvotes of the question            |
-```
 
-```
 Answers
 | field-name   | data-type      | description                                                   |
 | :---         |     :---:      |                                                           ---:|
@@ -77,4 +73,3 @@ Answers
 | upvote       | int            | it stores the upvotes of the answer                           |
 | downvote     | int            | it stores the downvotes of the answer                         |
 | accepted     | boolean        | it stores whether the naswer is accepted or not               |
-```
