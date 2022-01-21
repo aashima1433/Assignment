@@ -55,15 +55,15 @@ Users
 
 ```
 Questions
-| feild-name   | data-type      | description                             |
-| :---         |     :---:      |          ---:                           |
-| _id          | string         | it stores the id of the question        |
-| title        | string         | it stores the title of the question     |
-| detail       | string         | it stores the details of the question   |
-| tags         | array          | it stores the tags of the question      |
+| feild-name   | data-type      | description                                        |
+| :---         |     :---:      |          ---:                                      |
+| _id          | string         | it stores the id of the question                   |
+| title        | string         | it stores the title of the question                |
+| detail       | string         | it stores the details of the question              |
+| tags         | array          | it stores the tags of the question                 |
 | userid       | string         | it stores the userid of user who asked the question|
-| upvote       | int            | it stores the upvotes of the question   |
-| downvote     | int            | it stores the downvotes of the question |
+| upvote       | int            | it stores the upvotes of the question              |
+| downvote     | int            | it stores the downvotes of the question            |
 ```
 
 ```
