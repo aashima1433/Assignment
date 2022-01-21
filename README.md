@@ -480,6 +480,8 @@ Users
 | email-id     | string       | it stores email of the user   |
 | password     | string       | it stores password of the user|
 
+![image3](https://github.com/aashima1433/Assignment/blob/main/images/image3.png)
+
 Questions
 | field-name   | data-type      | description                                        |
 | :---         |     :---:      |                                                ---:|
@@ -490,6 +492,8 @@ Questions
 | userid       | string         | it stores the userid of user who asked the question|
 | upvote       | int            | it stores the upvotes of the question              |
 | downvote     | int            | it stores the downvotes of the question            |
+
+![image2](https://github.com/aashima1433/Assignment/blob/main/images/image2.png)
 
 Answers
 | field-name   | data-type      | description                                                   |
@@ -502,3 +506,4 @@ Answers
 | downvote     | int            | it stores the downvotes of the answer                         |
 | accepted     | boolean        | it stores whether the naswer is accepted or not               |
 
+![image1](https://github.com/aashima1433/Assignment/blob/main/images/image1.png)
