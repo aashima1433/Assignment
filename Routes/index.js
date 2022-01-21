@@ -7,8 +7,8 @@ import voteController from '../controllers/voteController';
 import ansController from '../controllers/ansController';
 import auth from '../middleware/auth'
 
-router.post('/register',auth,registerController.register)
-router.post('/login',auth,loginController.login)
+router.post('/register',registerController.register)
+router.post('/login',loginController.login)
 router.post('/addquestion/:id',auth,queController.postque)
 router.post('/addanswer/:id/:userid',auth,ansController.postans)
 router.put('/vote',auth, voteController.vote)

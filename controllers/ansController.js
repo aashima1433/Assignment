@@ -35,7 +35,7 @@ const ansController={
         });
   
         try {
-            const result = await user.save();
+            const result = await answer.save();
     
         } 
         
