@@ -46,7 +46,7 @@ This project is a clone of Stackoverflow and work similarly as the real one with
 
  - register: This is a post method and accepts name, email, password as input and make a new entry wrt new email.
  ```
- request format
+ request 
  {
 	 { "name" : "Aashima",
 	  "email":"kansalashima9@gmail.com", 
@@ -60,7 +60,7 @@ retruns the access token
 ```
  - login: This is a post method which takes in username and password and returns the access token of the particular user.
  ```
- request format
+ request 
  {
 	 username:"expname"
 	 password:""
@@ -156,6 +156,7 @@ request:
 
 ```
 ```
+response:
 { 
 	"_id": "61e94bb412d205e2411a15bd",
 	"title": "food",
@@ -248,7 +249,7 @@ response:
 ```
 - /getallquebyuser/:id : This is a get method which takes in he user id and returns all the question posted by the user.
 ```
- request
+ request:
  getallquesbyuser/<user-id>
 ```
 ```
@@ -331,6 +332,7 @@ request:
 ```
  
 ```
+response:
 { 
 	"_id": "61e95cb854d6dfde61b39865",
 	"description": "samsung",
@@ -344,11 +346,11 @@ request:
 ```
 - /allqueans: This is a get method which returns all question and related accepted answers.
 ```
-request
+request:
  /allqueans
 ```
 ```
-response
+response:
 {
     "que": [
         {
